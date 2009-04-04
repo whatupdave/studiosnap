@@ -1,0 +1,4 @@
+_ReSharper*
+src\StudioSnap\bin
+src\StudioSnap\obj
+*.suo
