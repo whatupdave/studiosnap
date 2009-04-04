@@ -1,5 +1,0 @@
-C:\projects\OSS\StudioSnap\src\StudioSnap\bin\Debug\StudioSnap.exe
-C:\projects\OSS\StudioSnap\src\StudioSnap\bin\Debug\StudioSnap.pdb
-C:\projects\OSS\StudioSnap\src\StudioSnap\obj\Debug\ResolveAssemblyReference.cache
-C:\projects\OSS\StudioSnap\src\StudioSnap\obj\Debug\StudioSnap.exe
-C:\projects\OSS\StudioSnap\src\StudioSnap\obj\Debug\StudioSnap.pdb
