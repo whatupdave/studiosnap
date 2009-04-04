@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudioSnap", "src\StudioSnap\StudioSnap.csproj", "{AF5C1CCA-AC09-42C6-9F1F-B1B76478176E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{60B75F22-C390-4B70-8A0E-DBDE98D78446}"
+	ProjectSection(SolutionItems) = preProject
+		Rakefile = Rakefile
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
