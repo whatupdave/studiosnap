@@ -1,6 +1,6 @@
 using EnvDTE;
 
-namespace StudioSnap
+namespace StudioSnap.Automation
 {
     public class StudioProject
     {

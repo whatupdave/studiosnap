@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using StudioSnap.Infrastructure;
 
 namespace StudioSnap
 {
@@ -21,7 +22,8 @@ namespace StudioSnap
                 Log = new SimpleLogger(logLevel);
 
                 var fileToAdd = Path.GetFullPath(args[0]);
-                AddFileToProject(fileToAdd);
+                var projectFileIncluder = new ProjectFileIncluder {Log = Log};
+                projectFileIncluder.IncludeFile(fileToAdd);
             }
             catch (Exception e)
             {
@@ -40,29 +42,6 @@ namespace StudioSnap
             Console.WriteLine(@"");
             Console.WriteLine(@"Example:  ");
             Console.WriteLine(@"  studiosnap src\StudioSnap\NewClass.cs");
-        }
-
-        private static void AddFileToProject(string fileToAdd)
-        {
-            var newFilePath = Path.GetDirectoryName(fileToAdd);
-            var projectPath = FindProjectFileAbove(newFilePath);
-
-            var studio = new Studio { Log = Log };
-            var project = studio.FindProjectAt(projectPath);
-            
-            if (project != null)
-                project.IncludeFile(fileToAdd);
-        }
-
-        private static string FindProjectFileAbove(string filePath)
-        {
-            Log.Info("Searching for project file in {0}", filePath);
-            if (Directory.GetFiles(filePath).Any(file => file.EndsWith(".csproj") || file.EndsWith(".vbproj")))
-                return filePath;
-
-            var parentFolder = new DirectoryInfo(filePath).Parent;
-            return parentFolder == null ? null : 
-                FindProjectFileAbove(parentFolder.FullName);
         }
     }
 }

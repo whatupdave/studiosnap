@@ -1,6 +1,6 @@
 using System;
 
-namespace StudioSnap
+namespace StudioSnap.Infrastructure
 {
     public class SimpleLogger : ISimpleLogger
     {

@@ -1,4 +1,4 @@
-namespace StudioSnap
+namespace StudioSnap.Infrastructure
 {
     public enum SimpleLogLevel
     {

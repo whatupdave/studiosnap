@@ -3,8 +3,9 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using EnvDTE;
+using StudioSnap.Infrastructure;
 
-namespace StudioSnap
+namespace StudioSnap.Automation
 {
     public class Studio
     {
@@ -34,9 +35,9 @@ namespace StudioSnap
             var project = 
                 projects.FirstOrDefault(
                     delegate(Project p) {
-                            Log.Info("  Project: {0}", p.FileName);
-                            return Path.GetDirectoryName(p.FileName).Equals(path, StringComparison.CurrentCultureIgnoreCase);
-                        }
+                                            Log.Info("  Project: {0}", p.FileName);
+                                            return Path.GetDirectoryName(p.FileName).Equals(path, StringComparison.CurrentCultureIgnoreCase);
+                    }
                     );
 
             if (project == null)

@@ -57,13 +57,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ISimpleLogger.cs" />
-    <Compile Include="NullLogger.cs" />
+    <Compile Include="Infrastructure\ISimpleLogger.cs" />
+    <Compile Include="Infrastructure\NullLogger.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProjectFileIncluder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleLogger.cs" />
-    <Compile Include="Studio.cs" />
-    <Compile Include="StudioProject.cs" />
+    <Compile Include="Infrastructure\SimpleLogger.cs" />
+    <Compile Include="Automation\Studio.cs" />
+    <Compile Include="Automation\StudioProject.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
